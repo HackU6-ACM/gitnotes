@@ -21,3 +21,18 @@ See also the list of [contributors](https://github.com/your/project/contributors
 ## License
 
 This project is licensed under the GNU GENERAL PUBLIC LICENSE V3 License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Purpose
+
+This project is a Chrome browser extension that allows a user to add comments to a github project without cluttering the code with inline comments.
+
+In order to use the plug-in a user must create an attributes file in the root of the repository for their project.   The attributes file should be named ".attributes" and is a hidden file.  The file is a text file in tsv format.  Entries in the attributes file should be as follows:
+
+    local/path/to/file1  KEY1 VALUE
+    local/path/to/file1  KEY2 VALUE
+    local/path/to/file2  KEY1 VALUE
+
+Each line contains a new entry. The parameters for an entry should be tab delimited.  
+
+KEY is a string of text to match in the code. 
+VALUE is a string of text to display in a popup box when the user hovers of the KEY string in the document.
