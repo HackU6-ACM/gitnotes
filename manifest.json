@@ -17,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["popup.js", "src/scripts/tooltip.js"]
+      "js": ["popup.js", "src/scripts/Tooltip.js", "src/scripts/makeTooltip.js"]
     }
   ],
   "background": {
