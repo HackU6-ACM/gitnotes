@@ -7,7 +7,7 @@ var client = new XMLHttpRequest();
 client.open('GET', attributes);
 client.onreadystatechange = function() {
    attributes = client.responseText;
-   document.body.innerHTML = attributes;
+   //document.body.innerHTML = attributes;
 }
 client.send();
 
@@ -34,9 +34,9 @@ var body = doc.substring(cut_beginning, cut_ending);
 var mykey = dict[key];
 var re = new RegExp(dict[key], "g");
 
-var mod_body = body.replace(re, "<a href='https://www.google.com'> test </a>");
+var mod_body = body.replace(re, "<div class='highlighted' <a href='https://www.google.com'> test </a></div>");
 
 doc = doc.replace(body, mod_body);
 
-//document.body.innerHTML = attributes;
+document.body.innerHTML = attributes;
 
