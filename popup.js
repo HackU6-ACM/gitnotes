@@ -7,18 +7,19 @@ var client = new XMLHttpRequest();
 client.open('GET', attributes);
 client.onreadystatechange = function() {
    attributes = client.responseText;
+   document.body.innerHTML = attributes;
 }
+client.send();
 
-function parse_attributes(Attributes)
-{
-    var dict = {};
-    
-    var str = "test";
 
-    dict[str] = "comments";
-}
-
-var attributes_dictionary = parse_attributes(attributes);
+var dict = {};
+var key = attributes.substring("KEY START", "KEY END");
+key = key.replace("KEY START", "");
+key = key.replace("KEY END", "");
+var value = attributes.substring("VALUE START", "VALUE END");
+value = value.replace("VALUE START", "");
+value = value.replace("VALUE END", "");
+dict[key] = value;
 
 var doc = document.body.innerHTML;
 
@@ -30,10 +31,12 @@ var cut_ending = doc.indexOf(tbody_end);
 
 var body = doc.substring(cut_beginning, cut_ending);
 
-var mod_body = body.replace(/GitNotes/g, "<a href='https://www.google.com'> test </a>");
+var mykey = dict[key];
+var re = new RegExp(dict[key], "g");
+
+var mod_body = body.replace(re, "<a href='https://www.google.com'> test </a>");
 
 doc = doc.replace(body, mod_body);
 
-document.body.innerHTML = doc;
-
+//document.body.innerHTML = attributes;
 
