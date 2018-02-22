@@ -12,14 +12,6 @@ client.onreadystatechange = function() {
 client.send();
 
 
-var dict = {};
-var key = attributes.substring("KEY START", "KEY END");
-key = key.replace("KEY START", "");
-key = key.replace("KEY END", "");
-var value = attributes.substring("VALUE START", "VALUE END");
-value = value.replace("VALUE START", "");
-value = value.replace("VALUE END", "");
-dict[key] = value;
 
 var doc = document.body.innerHTML;
 
@@ -38,5 +30,5 @@ var mod_body = body.replace(re, "<div class='highlighted' <a href='https://www.g
 
 doc = doc.replace(body, mod_body);
 
-document.body.innerHTML = attributes;
+document.body.innerHTML = doc;
 
