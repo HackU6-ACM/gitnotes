@@ -1,0 +1,25 @@
+{
+  "name": "gitnotes",
+  "version": "0.0.1",
+  "description": "This extension allows users to view popup hovercards over inline text",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paddy74/gitnotes.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Patrick Cox <pxcox003@odu.edu> (https://github.com/paddy74)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paddy74/gitnotes/issues"
+  },
+  "homepage": "https://github.com/paddy74/gitnotes#readme",
+  "dependencies": {
+    "angular": "^1.6.9"
+  }
+}
