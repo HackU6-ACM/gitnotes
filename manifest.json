@@ -12,11 +12,11 @@
   "permissions": [
     "activeTab",
     "storage",
-    "https://github.com/*"
+    "https://www.google.com/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://github.com/*"],
+      "matches": ["https://www.google.com/*"],
       "js": ["popup.js"]
     }
    ]
