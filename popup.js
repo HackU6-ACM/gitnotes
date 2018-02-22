@@ -1,4 +1,6 @@
 
+
+
 function getCurrentTabUrl(callback){
 
     var queryInfo = {
@@ -21,4 +23,3 @@ getCurrentTabUrl((url)  => {
         code: script
     });
 });
-
