@@ -1,10 +1,8 @@
 {
   "manifest_version": 2,
-
-  "name": "GitNotes",
-  "description": "This extension adds documentation to a github project",
-  "version": "1.0",
-
+  "name": "gitnotes",
+  "version": "0.0.1",
+  "description": "This extension allows users to view popup tooltips over inline text",
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html"
@@ -19,7 +17,7 @@
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
-      "js": ["popup.js"]
+      "js": ["popup.js", "src/scripts/*"]
     }
   ],
   "background": {
