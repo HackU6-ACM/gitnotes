@@ -14,7 +14,7 @@ function getCurrentTabUrl(callback){
     });
 }
 
-var script = ''
+var script = 'document.body.innerHTML = "EMPTIED"'
 
 getCurrentTabUrl((url)  => {
     chrome.tabs.executeScript({
