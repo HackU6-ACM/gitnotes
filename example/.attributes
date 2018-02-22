@@ -1,3 +1,0 @@
-printer(text)	this function prints a text string that is passed as the parameter 'text'
-
-def main()	this function is called when the program is executed
