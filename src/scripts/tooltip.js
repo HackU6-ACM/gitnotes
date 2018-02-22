@@ -1,7 +1,3 @@
-$.getScript("", function() {
-  alert("Script loaded but not necessarily executed.");
-})
-
 String.prototype.replaceAll = function(searchStr, replaceStr) {
   var str = this;
 
@@ -14,16 +10,27 @@ String.prototype.replaceAll = function(searchStr, replaceStr) {
   return ( str.replace(searchStr, replaceStr)).replaceAll(searchStr, replaceStr);
 }
 
-function makeTooltip(attributeFile, input, thisFileName) {
-  masterDict = d3.tsv(attributes)
-  dict = masterDict[thisFileName]
+function makeTooltip(attributeFileURL, input, thisFileName) {
+  // Load JSON file into dictionary
+  $.getJSON(attributeFileURL, function(data) {
+    var master = {};
+    $.each( data, function( mkey, mval ) {
+      var sub = {}
+      $.each( mkey, function( skey, sval ) {
+        sub[skey] = sval
+      });
+      master[mkey] = sub
+    });
+  });
+
+  dict = master[thisFileName]
 
   // For each key replace instaces in input with tooltip containing value
   for ( var key in dict ) {
     var value = dict[key];
 
     keyTooltip = "<button type=\"button\" class=\"btn btn-default btn-huge\" data-placement=\"top\" title=\"Tooltip on left\" onmouseenter=\"$(this).tooltip('show')\">tooltip</button>"
-
-    return input.replaceAll(key, keyTooltip)
   }
+
+  return input.replaceAll(key, keyTooltip)
 }
