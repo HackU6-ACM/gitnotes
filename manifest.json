@@ -11,6 +11,7 @@
   },
   "permissions": [
     "activeTab",
+    "tabs",
     "storage",
     "https://github.com/*"
   ],
@@ -19,10 +20,5 @@
       "matches": ["https://github.com/*"],
       "js": ["popup.js"]
     }
-  ],
-  "permissions": [
-    "activeTab",
-    "storage",
-	"https://github.com/*"
   ]
 }
