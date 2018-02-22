@@ -11,8 +11,18 @@ client.onreadystatechange = function() {
 
 var doc = document.body.innerHTML;
 
-doc = doc.replace(/git/gi, "<a href='https://www.google.com'> test </a>");
+var tbody_beg = "<tbody>";
+var tbody_end = "</tbody>";
+
+var cut_beginning = doc.indexOf(tbody_beg);
+var cut_ending = doc.indexOf(tbody_end);
+
+var body = doc.substring(cut_beginning, cut_ending);
+
+var mod_body = body.replace(/GitNotes/gi, "<a id='highlight' href='https://www.google.com'> test </a>");
+
+doc = doc.replace(body, mod_body);
+
 document.body.innerHTML = doc;
 
 
-console.log(doc);
