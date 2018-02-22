@@ -1,14 +1,18 @@
 
 var currentURL = window.location.href;
-var rawURL = currentURL.replace("/https://github.com/", "https://raw.githubusercontent.com/");
-var attributes = rawURL + "/.attributes"
-
-document.body.innerHTML = attributes;
+var rawURL = currentURL.replace("https://github.com/", "https://raw.githubusercontent.com/");
+var attributes = rawURL + "/.attributes";
 
 var client = new XMLHttpRequest();
 client.open('GET', attributes);
 client.onreadystatechange = function() {
-   var response =client.responseText;
-   document.body.innerHTML = response;
+   document.body.innerHTML = client.responseText;
 }
-client.send();
+
+var doc = document.body.innerHTML;
+
+doc = doc.replace(/git/gi, "<a href='https://www.google.com'> test </a>");
+document.body.innerHTML = doc;
+
+
+console.log(doc);
