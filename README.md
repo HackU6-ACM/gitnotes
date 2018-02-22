@@ -12,9 +12,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Patrick Cox** - *Contributor* - [paddy74](https://github.com/paddy74)
-* **Claus Othersen** - *Contributor* - [Cotherson](https://github.com/Cotherson)
+* **Claus Othersen** - *Contributor* - [Cothersen](https://github.com/Cothersen)
 * **Katrine Gausin** - *Contributor* - [kgausin](https://github.com/kgausin)
-* **Timothy Baker** - *Contributor* - [](https://github.com/)
+* **Timothy Baker** - *Contributor* - [tbake0155](https://github.com/tbake0155)
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
