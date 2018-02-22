@@ -3,7 +3,7 @@
 # example to demonstrate gitnotes functionality
 
 def printer(text) :
-    
+    print(text)
 
 def main() :
     text_string = "text to be printed"
