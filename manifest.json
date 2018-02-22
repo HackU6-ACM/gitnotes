@@ -13,12 +13,16 @@
     "activeTab",
     "tabs",
     "storage",
-    "https://github.com/*"
+    "https://github.com/*",
+	"webNavigation"
   ],
   "content_scripts": [
     {
       "matches": ["https://github.com/*"],
       "js": ["popup.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  }
 }
