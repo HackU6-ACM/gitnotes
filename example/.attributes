@@ -1,5 +1,3 @@
-START KEY def printer(text) END KEY
-START VALUE this function prints a text string that is passed as the parameter 'text' END VALUE
+printer(text)	this function prints a text string that is passed as the parameter 'text'
 
-START KEY def main() END KEY
-START VALUE this function is called when the program is executed END KEY
+def main()	this function is called when the program is executed
