@@ -11,9 +11,9 @@ String.prototype.replaceAll = function(searchStr, replaceStr) {
 }
 
 function makeTooltip(attributeFileURL, input, thisFileName) {
+  var master = {};
   // Load JSON file into dictionary
   $.getJSON(attributeFileURL, function(data) {
-    var master = {};
     $.each( data, function( mkey, mval ) {
       var sub = {}
       $.each( mkey, function( skey, sval ) {
@@ -25,6 +25,7 @@ function makeTooltip(attributeFileURL, input, thisFileName) {
 
   dict = master[thisFileName]
 
+  keyTooltip = ""
   // For each key replace instaces in input with tooltip containing value
   for ( var key in dict ) {
     var value = dict[key];
