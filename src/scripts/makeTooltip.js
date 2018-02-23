@@ -1,5 +1,5 @@
 String.prototype.replaceAll = function(searchStr, replaceStr) {
-  var str = this;
+  /*var str = this;
 
   // No match exists in string
   if ( str.indexOf(searchStr) === -1 ) {
@@ -8,9 +8,21 @@ String.prototype.replaceAll = function(searchStr, replaceStr) {
 
   // Replace and remove the first match
   return ( str.replace(searchStr, replaceStr)).replaceAll(searchStr, replaceStr);
+*/
+  $(this).html().replace(searchStr, replaceStr);
 }
 
+
+function getJSON(url) {
+  var Httppreq = new XMLHttpRequest();
+  Httppreq.open("GET", url, false);
+  Httppreq.send(null);
+  return Httppreq.responseText;
+}
+
+
 function makeTooltip(attributeFileURL, input, thisFileName) {
+<<<<<<< HEAD
   var master = {};
   // Load JSON file into dictionary
   $.getJSON(attributeFileURL, function(data) {
@@ -34,6 +46,23 @@ function makeTooltip(attributeFileURL, input, thisFileName) {
 
     keyTooltip = "<button type=\"button\" class=\"btn btn-default btn-huge\" data-placement=\"top\" title=\"Tooltip on left\" onmouseenter=\"$(this).tooltip('show')\">tooltip</button>"
   }
+=======
+  var dict = {};
+>>>>>>> 083c487620ec182d6c3fde02399ec5813058d744
 
-  return input.replaceAll(key, keyTooltip)
+  var json_obj = JSON.parse(getJSON(attributeFileURL));
+
+  for ( var fileName in json_obj ) {
+    if ( fileName == thisFileName ) {
+      var content = json_obj[fileName]
+      for ( var key in content ) {
+        var val = content[key];
+
+        keyTooltip = "<button type=\"button\" class=\"btn btn-default btn-huge\" data-placement=\"top\" title=\"Tooltip on left\" onmouseenter=\"$(this).tooltip('show')\">tooltip</button>";
+        input = input.replaceAll(/printer/gi, "hello");
+      }
+
+      return input
+    }
+  }
 }

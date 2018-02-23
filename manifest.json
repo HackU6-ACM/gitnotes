@@ -5,7 +5,7 @@
   "description": "This extension allows users to view popup tooltips over inline text",
   "browser_action": {
     "default_icon": "icon.png",
-    "default_popup": "src/popup.html"
+    "default_popup": "popup.html"
   },
   "permissions": [
     "activeTab",
@@ -15,7 +15,7 @@
 	"webNavigation"
   ],
   "background": {
-    "scripts": ["src/scripts/background.js"]
+    "scripts": ["background.js"]
   },
   "content_security_policy": "script-src 'self' https://ajax/googleapis.com; object-src 'self'",
   "content_scripts": [
@@ -26,7 +26,7 @@
       "js": ["src/vendor/jquery.min.js",
              "src/scripts/Tooltip.js",
              "src/scripts/makeTooltip.js",
-             "src/scripts/popup.js"]
+             "popup.js"]
     }
   ]
 }
