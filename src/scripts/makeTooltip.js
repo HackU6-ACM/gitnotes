@@ -22,7 +22,6 @@ function getJSON(url) {
 
 
 function makeTooltip(attributeFileURL, input, thisFileName) {
-<<<<<<< HEAD
   var master = {};
   // Load JSON file into dictionary
   $.getJSON(attributeFileURL, function(data) {
@@ -46,9 +45,8 @@ function makeTooltip(attributeFileURL, input, thisFileName) {
 
     keyTooltip = "<button type=\"button\" class=\"btn btn-default btn-huge\" data-placement=\"top\" title=\"Tooltip on left\" onmouseenter=\"$(this).tooltip('show')\">tooltip</button>"
   }
-=======
+
   var dict = {};
->>>>>>> 083c487620ec182d6c3fde02399ec5813058d744
 
   var json_obj = JSON.parse(getJSON(attributeFileURL));
 
