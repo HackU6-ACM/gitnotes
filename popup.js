@@ -1,4 +1,6 @@
-
+//var imported = document.createElement("script");
+//imported.src = "other src/scripts/makeTooltip.js"; 
+//document.getElementsByTagName("head")[0].appendChild(imported);
 
 
 var currentURL = window.location.href;
