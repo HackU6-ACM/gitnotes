@@ -22,6 +22,7 @@
     {
       "matches": ["https://github.com/*"],
       "css": ["src/styles/styles.css",
+			  "src/styles/styles_for_pop_up.css",
               "src/styles/tooltip.css"],
       "js": ["src/vendor/jquery.min.js",
              "src/scripts/Tooltip.js",

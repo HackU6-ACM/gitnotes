@@ -14,22 +14,33 @@ var fileName = currentURL.substring(currentURL.lastIndexOf('/'));
 fileName = fileName.replace("/","");
 
 
-    var doc = document.body.innerHTML;
-    var tbody_beg = "<tbody>";
-    var tbody_end = "</tbody>";
-    var cut_beginning = doc.indexOf(tbody_beg);
-    var cut_ending = doc.indexOf(tbody_end);
-    var body = doc.substring(cut_beginning, cut_ending);
-    
-    var mod_body = makeTooltip(attributes_file, body, fileName);
+var doc = document.body.innerHTML;
+var tbody_beg = "<tbody>";
+var tbody_end = "</tbody>";
+var cut_beginning = doc.indexOf(tbody_beg);
+var cut_ending = doc.indexOf(tbody_end);
+var body = doc.substring(cut_beginning, cut_ending);
 
-    //var re = new RegExp(["def"," ","printer"], "gi");
+var mod_body = makeTooltip(attributes_file, body, fileName);
 
-   // var mod_body = body.replace(/def.*printer/gi, "<a href='https://www.google.com'> test </a>");
+//var re = new RegExp(["def"," ","printer"], "gi");
 
-    doc = doc.replace(body, mod_body);
-    document.body.innerHTML = doc;
+// var mod_body = body.replace(/def.*printer/gi, "<a href='https://www.google.com'> test </a>");
+
+doc = doc.replace(body, mod_body);
+document.body.innerHTML = doc;
 
 
+
+$(document).ready(function(){
+	$("p").mouseover(function(){
+		$("p").css("background-color", "yellow");
+		//$(this).children(".description").show(); //a popup
+	});
+	$("p").mouseout(function(){
+		$("p").css("background-color", "lightgray");
+	//	$(this).children(".description").hide();
+	});
+});
 
 
