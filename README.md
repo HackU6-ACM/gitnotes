@@ -26,7 +26,7 @@ This project is licensed under the GNU GENERAL PUBLIC LICENSE V3 License - see t
 
 This project is a Chrome browser extension that allows a user to add comments to a github project without cluttering the code with inline comments.
 
-In order to use the plug-in a user must create an attributes file in the root of the repository for their project.   The attributes file should be named ".attributes" and is a hidden file.  The file is a text file in tsv format.  Entries in the attributes file should be as follows:
+In order to use the plug-in a user must create an attributes file in the root of the repository for their project.   The attributes file should be named "gitnotes.json" and is a hidden file.  The file is a text file in tsv format.  Entries in the attributes file should be as follows:
 
     local/path/to/file1  KEY1 VALUE
     local/path/to/file1  KEY2 VALUE
